@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import ShoppingCart from '@mui/icons-material/ShoppingCart';
 import { Badge } from '@mui/material';
 import Add from "@mui/icons-material/Add"
-import AddModal from '../Modal/Modal';
+import AddModal from '../Modal/AddModal';
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -115,6 +115,7 @@ function Navbar() {
             <IconButton aria-label="delete" onClick={handleOpen}>
                 <Add style={{ fontSize: 30 , color:"white"}}  />
             </IconButton>
+            <AddModal   open={open} handleClose={handleClose}  />
           </Box>
 
           <Box sx={{ flexGrow: 0, paddingX:2 }}>
@@ -157,7 +158,6 @@ function Navbar() {
           </Box>
         </Toolbar>
       </Container>
-      <AddModal open={open} handleClose={handleClose} />
     </AppBar>
   );
 }
